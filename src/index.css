@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Gt-walshiem-Medium';
+    src: url(../public/GT-Walsheim-Medium.otf);
+}
+
+@font-face {
+    font-family: 'Gt-walshiem-Bold';
+    src: url(../public/GT-Walsheim-Bold.otf);
+}
+@font-face {
+    font-family: 'Gt-walshiem-Light';
+    src: url(../public/GT-Walsheim-Light.otf);
+}
+
+@font-face {
+    font-family: 'Gt-walshiem-Regular';
+    src: url(../public/GT-Walsheim-Regular.otf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@theme {
+    --font-Medium: "Gt-walshiem-Medium", "sans-serif";
+    --font-Bold: "Gt-walshiem-Bold", "sans-serif";
+    --font-Light: "Gt-walshiem-Light", "sans-serif";
+    --font-Regular: "Gt-walshiem-Regular", "sans-serif";
+    --color-nav-white: #FFFFFF;
+    --color-txt-black: #2B2A35;
+    --color-txt-gray-black: #4A5260;
+    --color-cream-white: #F6F4F1;
+    --color-btn-blue: #0EA5E9;
+    --color-hover-blue: #2394C6;
+    --color-sec-blue: #1E40AF;
+    --color-footer: #181818;
+    --color-signin: #F7F7F8;
+    --color-border: #A7A6A6;
+    --color-dash-bg: #F8FDFC;
+    --color-dash-border: #E8E8E8;
+    --color-features: #868686;
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 550px;
+    --breakpoint-tablet-2: 700px;
+    --breakpoint-mini-desktop: 900px;
+}
