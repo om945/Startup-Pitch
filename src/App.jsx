@@ -9,6 +9,9 @@ import Dashboard from './pages/Dashboard'
 import UploadPitch from './pages/UploadPitch'
 import Profile from './pages/Profile'
 import Settings from './pages/Settings'
+import FindPitches from './pages/FindPitches'
+import SavedPitches from './pages/SavedPitches'
+import PitchDetails from './pages/PitchDetails'
 
 const App = () => {
   const location = useLocation();
@@ -34,6 +37,9 @@ const App = () => {
           <Route path='/user/founder/profile' element={<Profile />} />
           <Route path='/user/founder/create-pitch' element={<UploadPitch />} />
           <Route path='/user/founder/settings' element={<Settings />} />
+          <Route path='/user/investor/find-pitches' element={<FindPitches />} />
+          <Route path='/user/investor/find-pitches/pitch-id-11' element={<PitchDetails />} />
+          <Route path='/user/investor/saved-pitches' element={<SavedPitches />} />
         </Routes>
       </main>
       {!hideFooter &&

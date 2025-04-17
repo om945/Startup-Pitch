@@ -46,3 +46,37 @@
     --breakpoint-tablet-2: 700px;
     --breakpoint-mini-desktop: 900px;
 }
+
+.glow-border {
+    position: relative;
+    z-index: 0;
+}
+  
+.glow-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 4px;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #9da88f, #e3caa5, #d4b483);
+    background-size: 600% 600%;
+    animation: animateBorder 8s ease infinite;
+    z-index: -1;
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+}
+  
+@keyframes animateBorder {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}

@@ -7,7 +7,7 @@ const UploadPitch = () => {
 
     return (
         <div className='w-full flex flex-col px-[2rem] py-[1rem] h-[20rem]'>
-            <div className='mt-[4.6rem] pb-[2rem]'>
+            <div className='mt-[4.6rem] pb-[2rem] mini-desktop:ml-[20rem]'>
                 <h1 className='font-Bold text-txt-black text-[1.6rem]'>Create a new Pitch Deck</h1>
                 <form onSubmit={handlePitchSubmit} className='mt-[1.4rem] flex flex-col bg-cream-white border-dash-border border-[2px] px-[1.5rem] py-[1.5rem] rounded-lg gap-[1.5rem]'>
                     <div className='flex flex-col gap-[0.5rem]'>
