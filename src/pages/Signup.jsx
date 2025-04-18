@@ -4,8 +4,11 @@ import googleImg from "../assets/googleImg.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import { useFirebase } from '../context/firebase';
 
 const Signup = () => {
+
+  const firebase = useFirebase();
   const [role, setRole] = useState('Select a role')
 
   const handleLogIn = (e) => {
@@ -31,7 +34,7 @@ const Signup = () => {
               onClick={() => setRole('Sign Up as an Investor')}
             >Join as an Investor</button>
           </div>
-          <button className='flex w-full justify-center items-center mt-[1.5rem] font-Regular text-txt-gray-black border-border border-[1px] py-[0.5rem] px-[0.4rem] rounded-xl cursor-pointer hover:border-txt-black'>
+          <button onClick={firebase.signinWithGoogle} className='flex w-full justify-center items-center mt-[1.5rem] font-Regular text-txt-gray-black border-border border-[1px] py-[0.5rem] px-[0.4rem] rounded-xl cursor-pointer hover:border-txt-black'>
             <img src={googleImg} alt="google-logo" className='w-[1.4rem] mr-[0.5rem]' />
             Continue with Google
           </button>

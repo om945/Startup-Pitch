@@ -1,4 +1,5 @@
 import React from 'react'
+import {useFirebase} from './context/firebase'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Footer from './components/Footer'
@@ -14,6 +15,7 @@ import SavedPitches from './pages/SavedPitches'
 import PitchDetails from './pages/PitchDetails'
 
 const App = () => {
+  const firebase = useFirebase();
   const location = useLocation();
   const hideNavbar = location.pathname.startsWith("/user/");
   const hideFooter = location.pathname.startsWith("/user/");
